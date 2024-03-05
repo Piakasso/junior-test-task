@@ -1,2 +1,126 @@
-.page {
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.adCard {
+  width: 250px;
+  box-shadow: 10px 11px 53px -3px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: 10px 11px 53px -3px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 10px 11px 53px -3px rgba(0, 0, 0, 0.56);
+  padding-bottom: 10px;
+}
+
+.adsTitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.AdsList {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 20px;
+  @media (min-width: 1199px) {
+    grid-template-columns: repeat(4, 250px);
+  }
+}
+
+#alert-dialog-description {
+  display: flex;
+}
+
+.filter {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  & span {
+    font-weight: 700;
+  }
+}
+
+.adImg {
+  margin-bottom: 40px;
+  object-fit: cover;
+}
+
+.adDescr {
+  padding: 0 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  & p {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.detailsPage {
+  position: relative;
+  padding: 40px;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  & p {
+    margin-top: 40px;
+  }
+}
+
+.adImgBlock {
+  flex: 1;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 30vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  & div {
+    height: 100%;
+    width: 600px;
+    max-width: 600px;
+  }
+
+  & img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.rightButton {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.leftButton {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
